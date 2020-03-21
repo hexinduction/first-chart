@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <section class="grid-container">
+            <div class="center">
+                <canvas id="myChart"></canvas>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <script>
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'pie',
+
+    // The data for our dataset
+    data: {
+        labels: ['The effects of Coronavirus', 'The gulf between social obligation and my autonomy'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: ['rgb(255,99,132)', 'rgb(99,255,219)'],
+            data: [8,18]
+        }]
+
+
+    },
+
+
+    // Configuration options go here
+    options: {}
+});
+
+  Chart.defaults.global.responsive = true;
+
+
+        </script>
+
+    </body>
+</html>
